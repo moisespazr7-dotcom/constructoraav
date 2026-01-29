@@ -1,4 +1,4 @@
-const toggle = document.getElementById('menuToggle');
+﻿const toggle = document.getElementById('menuToggle');
 const links = document.getElementById('navLinks');
 const nav = document.querySelector('.nav');
 
@@ -36,7 +36,7 @@ const observer = new IntersectionObserver((entries) => {
 revealItems.forEach(item => observer.observe(item));
 
 const countObserver = new IntersectionObserver((entries) => {
-  if (entries[0].isIntersecting && !countersPlayed) {
+  if (entries[0]?.isIntersecting && !countersPlayed) {
     countersPlayed = true;
     counters.forEach(counter => {
       const target = Number(counter.dataset.counter);
@@ -69,4 +69,75 @@ mockForms.forEach(form => {
     }
     form.reset();
   });
+});
+
+const carousels = document.querySelectorAll('[data-carousel]');
+carousels.forEach(carousel => {
+  const track = carousel.querySelector('.carousel-track');
+  if (!track) return;
+  const original = Array.from(track.children);
+  if (!original.length) return;
+
+  // Clone slides for infinite loop
+  original.forEach(slide => track.appendChild(slide.cloneNode(true)));
+  const total = original.length;
+  const allSlides = Array.from(track.children);
+
+  const prev = carousel.querySelector('.carousel-btn.prev');
+  const next = carousel.querySelector('.carousel-btn.next');
+  const dotsWrap = carousel.querySelector('.carousel-dots');
+  let index = 0;
+  let timer = null;
+
+  const getStep = () => {
+    const width = parseFloat(getComputedStyle(carousel).getPropertyValue('--slide-width')) || 240;
+    const gap = parseFloat(getComputedStyle(carousel).getPropertyValue('--slide-gap')) || 18;
+    return width + gap;
+  };
+
+  const updateDots = () => {
+    if (!dotsWrap) return;
+    const active = index % total;
+    dotsWrap.querySelectorAll('button').forEach((d, i) => d.classList.toggle('active', i === active));
+  };
+
+  if (dotsWrap) {
+    dotsWrap.innerHTML = '';
+    for (let i = 0; i < total; i++) {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(dot);
+    }
+  }
+
+  const goTo = (i, animate = true) => {
+    index = (i + allSlides.length) % allSlides.length;
+    track.style.transition = animate ? 'transform 0.5s ease' : 'none';
+    track.style.transform = `translateX(-${getStep() * index}px)`;
+    updateDots();
+  };
+
+  track.addEventListener('transitionend', () => {
+    if (index >= total) {
+      goTo(0, false);
+      requestAnimationFrame(() => {
+        track.style.transition = 'transform 0.5s ease';
+      });
+    }
+  });
+
+  prev?.addEventListener('click', () => {
+    if (index === 0) {
+      goTo(total, false);
+      requestAnimationFrame(() => goTo(total - 1));
+      return;
+    }
+    goTo(index - 1);
+  });
+  next?.addEventListener('click', () => goTo(index + 1));
+  window.addEventListener('resize', () => goTo(index, false));
+
+  goTo(0, false);
+  timer = setInterval(() => goTo(index + 1), 2500);
 });
