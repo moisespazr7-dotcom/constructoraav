@@ -1,0 +1,261 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ConstructoraAV - Renta de maquinaria</title>
+  <link rel="stylesheet" href="{{ asset('style.css') }}" />
+</head>
+<body>
+  <div class="page">
+    <nav class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="{{ url('/') }}#top"><img class="brand-logo" src="{{ asset('exteriores/logo-chido.png') }}" alt="Constructora AV" /></a>
+        <button class="mobile-toggle" id="menuToggle">Menu</button>
+        <div class="nav-links" id="navLinks">
+          <a href="{{ url('servicios.html') }}">Servicios</a>
+          <a href="{{ url('proyectos.html') }}">Proyectos</a>
+          <a href="{{ url('renta.html') }}">Renta de maquinaria</a>
+          <a href="{{ url('materiales.html') }}">Materiales</a>
+          <a href="{{ url('/') }}#nosotros">Nosotros</a>
+          <a href="{{ url('/') }}#contacto">Contacto</a>
+        </div>
+        <a class="cta" href="{{ url('/') }}#contacto">Cotizar proyecto</a>
+      </div>
+    </nav>
+
+    <section class="page-hero" id="top">
+      <div class="page-hero-content">
+        <span class="hero-tag">Disponibilidad inmediata</span>
+        <h1>Renta de maquinaria para obra civil e industrial</h1>
+        <p>Equipo confiable con mantenimiento al dia, operadores certificados y entrega en sitio para mantener tu proyecto en marcha.</p>
+        <div class="hero-badges">
+          <span>Renta por dia, semana o proyecto</span>
+          <span>Soporte tecnico 24/7</span>
+          <span>Entrega y recoleccion en obra</span>
+        </div>
+        <div class="hero-actions">
+          <a class="cta" href="#cotizar-renta">Cotizar renta</a>
+          <a class="cta cta-outline" href="{{ url('/') }}#contacto">Hablar con un asesor</a>
+        </div>
+      </div>
+      <div class="page-hero-card">
+        <h3>Incluye en la renta</h3>
+        <ul class="check-list">
+          <li>Operadores certificados</li>
+          <li>Mantenimiento preventivo</li>
+          <li>Entrega programada</li>
+          <li>Asistencia tecnica</li>
+        </ul>
+        <div class="card-metric">
+          <strong>+40</strong>
+          <span>Equipos disponibles</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="maquinaria">
+      <div class="section-header">
+        <div>
+          <h2>Maquinaria disponible</h2>
+          <p>Selecciona el equipo segun las necesidades de tu obra.</p>
+        </div>
+      </div>
+      <div class="carousel" data-carousel>
+        <button class="carousel-btn prev" type="button" aria-label="Anterior">‹</button>
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <img src="{{ asset('maquinaria-pesada/excavadora-cat.jpg') }}" alt="Excavadora CAT" />
+            <div class="carousel-caption">
+              <strong>Excavadora CAT</strong>
+              <ul>
+                <li>Uso: excavacion y zanjeo</li>
+                <li>Capacidad: 0.8–1.2 m3</li>
+                <li>Disponibilidad inmediata</li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="{{ asset('maquinaria-pesada/retroexcavadora-428-cat.jpg') }}" alt="Retroexcavadora 428 CAT" />
+            <div class="carousel-caption">
+              <strong>Retroexcavadora 428 CAT</strong>
+              <ul>
+                <li>Uso: excavacion y carga</li>
+                <li>Profundidad: 4–5 m</li>
+                <li>Ideal para obra urbana</li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="{{ asset('maquinaria-pesada/motoconformadora-cat.jpg') }}" alt="Motoconformadora CAT" />
+            <div class="carousel-caption">
+              <strong>Motoconformadora CAT</strong>
+              <ul>
+                <li>Uso: nivelacion y perfilado</li>
+                <li>Hoja: 12–14 ft</li>
+                <li>Rendimiento alto</li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="{{ asset('maquinaria-pesada/vibro-compactador-cat.jpg') }}" alt="Vibro compactador CAT" />
+            <div class="carousel-caption">
+              <strong>Vibro compactador CAT</strong>
+              <ul>
+                <li>Uso: compactacion de suelos</li>
+                <li>Peso: 8–12 t</li>
+                <li>Gran estabilidad</li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="{{ asset('maquinaria-pesada/kenworth-t800-amarillo.jpg') }}" alt="Kenworth T800" />
+            <div class="carousel-caption">
+              <strong>Kenworth T800</strong>
+              <ul>
+                <li>Uso: transporte pesado</li>
+                <li>Traccion: 6x4</li>
+                <li>Alto rendimiento</li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="{{ asset('maquinaria-pesada/pipa-de-agua.jpg') }}" alt="Pipa de agua" />
+            <div class="carousel-caption">
+              <strong>Pipa de agua</strong>
+              <ul>
+                <li>Uso: riego y control de polvo</li>
+                <li>Capacidad: 10–20 mil L</li>
+                <li>Entrega en sitio</li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="{{ asset('maquinaria-pesada/minicargador-cat.jpg') }}" alt="Minicargador CAT" />
+            <div class="carousel-caption">
+              <strong>Minicargador CAT</strong>
+              <ul>
+                <li>Uso: maniobras en espacios reducidos</li>
+                <li>Capacidad: 0.4–0.6 m3</li>
+                <li>Alta versatilidad</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn next" type="button" aria-label="Siguiente">›</button>
+        <div class="carousel-dots" aria-hidden="true"></div>
+      </div>
+      <div class="material-note">
+        <h3>Asesoria para tu renta</h3>
+        <p>Te ayudamos a elegir el equipo ideal segun el volumen de obra, condiciones del terreno y tiempos de ejecucion.</p>
+      </div>
+      <div class="equipment-grid">
+        <article class="equipment-card reveal">
+          <h3>Retroexcavadoras</h3>
+          <p>Excavacion y carga para frentes de obra activos.</p>
+        </article>
+        <article class="equipment-card reveal">
+          <h3>Motoconformadoras</h3>
+          <p>Perfilado y nivelacion de caminos y plataformas.</p>
+        </article>
+        <article class="equipment-card reveal">
+          <h3>Camiones de volteo</h3>
+          <p>Transporte eficiente de materiales y escombro.</p>
+        </article>
+        <article class="equipment-card reveal">
+          <h3>Compactadores</h3>
+          <p>Compactacion precisa de suelos y capas base.</p>
+        </article>
+        <article class="equipment-card reveal">
+          <h3>Excavadoras</h3>
+          <p>Excavacion de alto volumen y apoyo en movimiento de tierra.</p>
+        </article>
+        <article class="equipment-card reveal">
+          <h3>Minicargadores</h3>
+          <p>Maniobras en espacios reducidos con alta versatilidad.</p>
+        </article>
+        <article class="equipment-card reveal">
+          <h3>Vibro compactadores</h3>
+          <p>Compactacion con control de vibracion y estabilidad.</p>
+        </article>
+        <article class="equipment-card reveal">
+          <h3>Pipas de agua</h3>
+          <p>Riego y control de polvo para frentes de obra.</p>
+        </article>
+        <article class="equipment-card reveal">
+          <h3>Camiones Kenworth</h3>
+          <p>Transporte pesado para materiales y equipos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="cotizar-renta">
+      <div class="section-header">
+        <div>
+          <h2>Cotizar renta</h2>
+          <p>Comparte la informacion del equipo y fechas para enviarte una propuesta.</p>
+        </div>
+      </div>
+      <div class="quote-grid">
+        <div class="quote-card reveal">
+          <h3>Asesoria inmediata</h3>
+          <p>Te ayudamos a seleccionar el equipo adecuado segun volumen de obra, tiempos y condiciones del terreno.</p>
+          <ul class="check-list">
+            <li>Recomendacion tecnica</li>
+            <li>Opciones de renta flexibles</li>
+            <li>Entrega programada</li>
+          </ul>
+        </div>
+        <form class="quote-form reveal" method="POST" action="{{ route('renta.submit') }}">
+          @csrf
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Nombre" required />
+            <input type="tel" name="phone" placeholder="Telefono" required />
+          </div>
+          <div class="form-row">
+            <input type="text" name="equipment" placeholder="Equipo requerido" required />
+            <input type="text" name="rental_date" placeholder="Fecha de renta" />
+          </div>
+          <textarea name="details" placeholder="Detalle del servicio" required></textarea>
+          <button class="cta" type="submit">Enviar solicitud</button>
+          <p class="form-status" role="status">{{ session('success') }}</p>
+          <p class="privacy-note">[NOMBRE COMERCIAL] es responsable del tratamiento de sus datos personales. Los datos proporcionados en este formulario se usarán para atender su solicitud. Consulte el <a href="{{ url('legal.html#aviso') }}">Aviso de Privacidad Integral</a>.</p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h3>ConstructoraAV</h3>
+          <p>Construccion integral con enfoque tecnico, seguridad y entrega puntual.</p>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <p>+52 322 209 7343</p>
+          <p>constructoraaguilarvillegas@gmail.com</p>
+        </div>
+        <div>
+          <h4>Links</h4>
+          <a href="{{ url('servicios.html') }}">Servicios</a>
+          <a href="{{ url('proyectos.html') }}">Proyectos</a>
+          <a href="{{ url('renta.html') }}">Renta de maquinaria</a>
+          <a href="{{ url('materiales.html') }}">Materiales</a>
+          <a href="{{ url('/') }}#contacto">Contacto</a>
+          <a href="{{ url('legal.html') }}" class="footer-muted">Aviso de privacidad</a>
+        </div>
+        <div>
+          <h4>Acceso interno</h4>
+          <p class="footer-muted">Solo personal autorizado.</p>
+          <a class="footer-internal" href="/login">Acceso interno</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        ConstructoraAV 2026 - Empresa de construccion. Todos los derechos reservados.
+      </div>
+    </footer>
+  </div>
+
+  <script src="{{ asset('script.js') }}"></script>
+</body>
+</html>

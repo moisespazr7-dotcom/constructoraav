@@ -1,0 +1,204 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ConstructoraAV - Construccion y Servicios</title>
+  <link rel="stylesheet" href="{{ asset('style.css') }}" />
+</head>
+<body>
+  <div class="page">
+    <nav class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="{{ url('/') }}#top"><img class="brand-logo" src="{{ asset('exteriores/logo-chido.png') }}" alt="Constructora AV" /></a>
+        <button class="mobile-toggle" id="menuToggle">Menu</button>
+        <div class="nav-links" id="navLinks">
+          <a href="{{ url('servicios.html') }}">Servicios</a>
+          <a href="{{ url('proyectos.html') }}">Proyectos</a>
+          <a href="{{ url('renta.html') }}">Renta de maquinaria</a>
+          <a href="{{ url('materiales.html') }}">Materiales</a>
+          <a href="{{ url('/') }}#nosotros">Nosotros</a>
+          <a href="{{ url('/') }}#contacto">Contacto</a>
+        </div>
+        <a class="cta" href="{{ url('/') }}#contacto">Cotizar proyecto</a>
+      </div>
+    </nav>
+
+    <section class="hero" id="top">
+      <div>
+        <span class="hero-tag">Construimos confianza desde 1998</span>
+        <h1>Proyectos de construccion con precision, seguridad y entrega puntual</h1>
+        <p>Somos una empresa de construccion integral especializada en obra civil, industrial y corporativa. Tambien nos especializamos en terrenos fragiles o complejos, con ingenieria geotecnica y control de riesgos en cada etapa.</p>
+        <div style="margin-top:24px; display:flex; gap:14px; flex-wrap: wrap;">
+          <a class="cta" href="{{ url('/') }}#contacto">Agenda una visita tecnica</a>
+          <a href="{{ url('proyectos.html') }}" style="padding:10px 18px; border-radius:999px; border:1px solid rgba(28, 42, 58, 0.2);">Ver proyectos</a>
+        </div>
+      </div>
+      <div class="hero-cards">
+        <div class="card">
+          <strong>Gestion 360</strong>
+          <small>Planeacion, permisos, supervision y entrega llave en mano.</small>
+        </div>
+        <div class="card">
+          <strong>Equipo senior</strong>
+          <small>Ingenieria y arquitectura con experiencia en proyectos complejos.</small>
+        </div>
+        <div class="card">
+          <strong>Control de calidad</strong>
+          <small>Protocolos estrictos en seguridad industrial y normativas locales.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="nosotros">
+      <div class="section-header">
+        <div>
+          <h2>¿Por que ConstructoraAV?</h2>
+          <p>Un equipo tecnico que prioriza la seguridad, la calidad y la entrega puntual.</p>
+        </div>
+      </div>
+      <div class="why-grid">
+        <ul class="why-list">
+          <li class="reveal">Seguridad y normativas en cada fase del proyecto.</li>
+          <li class="reveal">Control de calidad con verificacion continua.</li>
+          <li class="reveal">Entrega puntual con seguimiento de cronograma.</li>
+          <li class="reveal">Supervision tecnica y reportes claros.</li>
+          <li class="reveal">Experiencia del equipo en proyectos complejos.</li>
+        </ul>
+        <div class="metrics-grid">
+          <div class="metric-card reveal">
+            <strong data-counter="25">0</strong>
+            <span>Anos de experiencia</span>
+          </div>
+          <div class="metric-card reveal">
+            <strong data-counter="180">0</strong>
+            <span>Proyectos completados</span>
+          </div>
+          <div class="metric-card reveal">
+            <strong data-counter="98">0</strong>
+            <span>% de satisfaccion</span>
+          </div>
+          <div class="metric-card reveal">
+            <strong data-counter="120">0</strong>
+            <span>Especialistas en campo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proceso">
+      <div class="section-header">
+        <div>
+          <h2>Proceso de trabajo</h2>
+          <p>Un flujo claro para garantizar resultados consistentes en tiempo y forma.</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-step reveal">
+          <span>1</span>
+          <div>
+            <h3>Diagnostico</h3>
+            <p>Levantamiento de necesidades, condiciones y objetivos del proyecto.</p>
+          </div>
+        </div>
+        <div class="timeline-step reveal">
+          <span>2</span>
+          <div>
+            <h3>Planeacion y presupuesto</h3>
+            <p>Definimos cronograma, costos y recursos para una ejecucion eficiente.</p>
+          </div>
+        </div>
+        <div class="timeline-step reveal">
+          <span>3</span>
+          <div>
+            <h3>Ejecucion y supervision</h3>
+            <p>Obra en marcha con seguimiento tecnico y reportes continuos.</p>
+          </div>
+        </div>
+        <div class="timeline-step reveal">
+          <span>4</span>
+          <div>
+            <h3>Control de calidad y seguridad</h3>
+            <p>Validacion de especificaciones y cumplimiento normativo.</p>
+          </div>
+        </div>
+        <div class="timeline-step reveal">
+          <span>5</span>
+          <div>
+            <h3>Entrega</h3>
+            <p>Verificacion final, cierre y entrega con documentacion completa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="section-header">
+        <div>
+          <h2>Contacto / Cotizar</h2>
+          <p>Cuentanos sobre tu proyecto. Te responderemos en menos de 24 horas.</p>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <h3>Datos de contacto</h3>
+          <p>Av. Industria 210, Monterrey</p>
+          <p>+52 81 0000 0000</p>
+          <p>contacto@constructorav.com</p>
+          <p>Horario: Lunes a Sabado, 9:00 - 18:00</p>
+        </div>
+        <form class="contact-form reveal" method="POST" action="{{ route('contacto.submit') }}">
+          @csrf
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Nombre" required />
+            <input type="tel" name="phone" placeholder="Telefono" required />
+          </div>
+          <div class="form-row">
+            <input type="email" name="email" placeholder="Correo" />
+            <input type="text" name="project_address" placeholder="Direccion del proyecto" />
+          </div>
+          <textarea name="project_info" placeholder="Informacion del proyecto" required></textarea>
+          <button class="cta" type="submit">Enviar solicitud</button>
+          <p class="form-status" role="status">{{ session('success') }}</p>
+          <p class="privacy-note">[NOMBRE COMERCIAL] es responsable del tratamiento de sus datos personales. Los datos proporcionados en este formulario se usarán para atender su solicitud. Consulte el <a href="{{ url('legal.html#aviso') }}">Aviso de Privacidad Integral</a>.</p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer">
+      <div class="footer-grid">
+        <div>
+          <h3>ConstructoraAV</h3>
+          <p>Construccion integral con enfoque tecnico, seguridad y entrega puntual.</p>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <p>Av. Industria 210, Monterrey</p>
+          <p>+52 81 0000 0000</p>
+          <p>contacto@constructorav.com</p>
+        </div>
+        <div>
+          <h4>Links</h4>
+          <a href="{{ url('servicios.html') }}">Servicios</a>
+          <a href="{{ url('proyectos.html') }}">Proyectos</a>
+          <a href="{{ url('renta.html') }}">Renta de maquinaria</a>
+          <a href="{{ url('materiales.html') }}">Materiales</a>
+          <a href="{{ url('/') }}#nosotros">Nosotros</a>
+          <a href="{{ url('/') }}#contacto">Contacto</a>
+          <a href="{{ url('legal.html') }}" class="footer-muted">Aviso de privacidad</a>
+        </div>
+        <div>
+          <h4>Acceso interno</h4>
+          <p class="footer-muted">Solo personal autorizado.</p>
+          <a class="footer-internal" href="/login">Acceso interno</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        ConstructoraAV 2026 - Empresa de construccion. Todos los derechos reservados.
+      </div>
+    </footer>
+  </div>
+
+  <script src="{{ asset('script.js') }}"></script>
+</body>
+</html>

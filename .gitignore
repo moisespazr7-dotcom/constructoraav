@@ -22,3 +22,6 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Block accidental large binaries
+public/materiales-agregados/*.exe

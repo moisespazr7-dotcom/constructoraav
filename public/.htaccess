@@ -1,11 +1,14 @@
 <IfModule mod_rewrite.c>
-    DirectoryIndex index.html index.php
+    DirectoryIndex index.php index.html
 
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
 
     RewriteEngine On
+
+    # Map legacy index.html to Laravel home
+    RewriteRule ^index\.html$ / [R=301,L]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
